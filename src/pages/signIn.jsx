@@ -28,6 +28,7 @@ function SignIn() {
         // minW={"772px"}
         w={{ base: "full", xl: "772px" }}
         py="40px"
+        px={{ base: "40px", xl: "0" }}
         borderRadius={"16"}
       >
         <HStack justify={"center"} spacing="7">
