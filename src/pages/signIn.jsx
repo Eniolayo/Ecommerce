@@ -25,10 +25,8 @@ function SignIn() {
     <VStack my="20" spacing={"5"}>
       <Box
         bg="white"
-        // minW={"772px"}
-        w={{ base: "full", xl: "772px" }}
+        w={{ base: "80vw", xl: "772px" }}
         py="40px"
-        px={{ base: "40px", xl: "0" }}
         borderRadius={"16"}
       >
         <HStack justify={"center"} spacing="7">
@@ -84,7 +82,6 @@ function SignIn() {
               color="secondary.grey"
               borderRadius={"16px"}
               opacity={1}
-              w={"374px"}
               py="6"
               _placeholder={{ opacity: 1, color: "secondary.grey" }}
             />
