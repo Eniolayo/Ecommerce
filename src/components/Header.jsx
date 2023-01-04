@@ -12,6 +12,8 @@ import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
 import Logo from "../assets/Logo.png";
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <HStack w="85%" mx="auto" justifyContent={"space-between"}>
@@ -60,18 +62,20 @@ function Header() {
           />
         </Box>
       </HStack>
-      <Button
-        color="white"
-        bg="transparent"
-        borderWidth={1}
-        borderColor={"secondary.white"}
-        _hover={{ bg: "tranparent" }}
-        px="10"
-        py="6"
-        borderRadius={"2xl"}
-      >
-        Sign In
-      </Button>
+      <Link to="/sign-in">
+        <Button
+          color="white"
+          bg="transparent"
+          borderWidth={1}
+          borderColor={"secondary.white"}
+          _hover={{ bg: "tranparent" }}
+          px="10"
+          py="6"
+          borderRadius={"2xl"}
+        >
+          Sign In
+        </Button>
+      </Link>
     </HStack>
   );
 }
