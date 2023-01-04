@@ -112,6 +112,7 @@ function SignIn() {
             bg="primary.green"
             _hover={{ bg: "primary.green" }}
             py="10"
+            color={"white"}
             mt="60px"
           >
             Sign In

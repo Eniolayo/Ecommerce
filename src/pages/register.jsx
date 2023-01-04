@@ -12,9 +12,15 @@ import {
   Button,
   InputRightElement,
   IconButton,
+  Checkbox,
+  Select,
 } from "@chakra-ui/react";
 import React from "react";
-import { AiOutlineEye, AiOutlineMail } from "react-icons/ai";
+import {
+  AiOutlineCaretDown,
+  AiOutlineEye,
+  AiOutlineMail,
+} from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
 import { BsTelephone } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -91,6 +97,16 @@ function Register() {
               _placeholder={{ opacity: 1, color: "secondary.grey" }}
             />
           </InputGroup>
+          <Select
+            icon={<AiOutlineCaretDown />}
+            placeholder="Select Country"
+            borderRadius={"16px"}
+            mt="4"
+          >
+            <option value="option1">United State</option>
+            <option value="option2">Canada</option>
+            <option value="option3">Norway</option>
+          </Select>
           <InputGroup borderColor="secondary.grey" mt="4" mb="2">
             <InputLeftElement pointerEvents="none" py="6">
               <Icon as={BiLockAlt} boxSize={"26"} color="primary.dark" />
@@ -109,25 +125,24 @@ function Register() {
             </InputRightElement>
           </InputGroup>
 
-          <Link
-            to="/"
-            style={{
-              textAlign: "right",
-            }}
-          >
-            <Text color={"primary.dark"} fontSize="12" fontWeight={"600"}>
-              Forgot password?
+          <Checkbox>
+            <Text color={"primary.dark"} fontSize="12" fontWeight={"400"}>
+              I accepted{" "}
+              <Text fontWeight={"600"} as="span">
+                Terms & Privacy Policy
+              </Text>
             </Text>
-          </Link>
+          </Checkbox>
           <Button
             w="full"
             borderRadius="16px"
             bg="primary.green"
             _hover={{ bg: "primary.green" }}
             py="10"
-            mt="60px"
+            mt="40px"
+            color={"white"}
           >
-            Sign In
+            Register
           </Button>
         </form>
       </Box>
