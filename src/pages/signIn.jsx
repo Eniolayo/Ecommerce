@@ -21,6 +21,7 @@ import { FiFacebook, FiTwitter } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 function SignIn() {
+  const [showPassword, setShowPassword] = React.useState(false);
   return (
     <VStack my="20" spacing={"5"}>
       <Box
@@ -83,7 +84,7 @@ function SignIn() {
               <Icon as={BiLockAlt} boxSize={"26"} color="primary.dark" />
             </InputLeftElement>
             <Input
-              type="text"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               color="secondary.grey"
               borderRadius={"16px"}
@@ -91,7 +92,10 @@ function SignIn() {
               py="6"
               _placeholder={{ opacity: 1, color: "secondary.grey" }}
             />
-            <InputRightElement pointerEvents="none" py="6">
+            <InputRightElement
+              onClick={() => setShowPassword(!showPassword)}
+              py="6"
+            >
               <Icon as={AiOutlineEye} boxSize={"26"} color="primary.dark" />
             </InputRightElement>
           </InputGroup>
