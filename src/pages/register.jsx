@@ -26,6 +26,8 @@ import { BsTelephone } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Register() {
+  const [showPassword, setShowPassword] = React.useState(false);
+
   return (
     <VStack my="20" spacing={"5"}>
       <Box
@@ -112,7 +114,7 @@ function Register() {
               <Icon as={BiLockAlt} boxSize={"26"} color="primary.dark" />
             </InputLeftElement>
             <Input
-              type="text"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               color="secondary.grey"
               borderRadius={"16px"}
@@ -120,7 +122,10 @@ function Register() {
               py="6"
               _placeholder={{ opacity: 1, color: "secondary.grey" }}
             />
-            <InputRightElement pointerEvents="none" py="6">
+            <InputRightElement
+              onClick={() => setShowPassword(!showPassword)}
+              py="6"
+            >
               <Icon as={AiOutlineEye} boxSize={"26"} color="primary.dark" />
             </InputRightElement>
           </InputGroup>
