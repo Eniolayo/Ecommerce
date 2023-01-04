@@ -48,9 +48,15 @@ function SignIn() {
           >
             Sign in
           </Heading>
-          <Heading fontSize={"18px"} fontWeight="700" color={"secondary.grey"}>
-            Register
-          </Heading>
+          <Link to="/register">
+            <Heading
+              fontSize={"18px"}
+              fontWeight="700"
+              color={"secondary.grey"}
+            >
+              Register
+            </Heading>
+          </Link>
         </HStack>
         <form
           style={{
