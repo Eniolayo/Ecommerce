@@ -15,9 +15,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineEye, AiOutlineMail } from "react-icons/ai";
-
 import { BiLockAlt } from "react-icons/bi";
-import { FiFacebook, FiTwitter } from "react-icons/fi";
+import { BsTelephone } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Register() {
@@ -30,9 +29,15 @@ function Register() {
         borderRadius={"16"}
       >
         <HStack justify={"center"} spacing="7">
-          <Heading fontSize={"18px"} fontWeight="700" color={"secondary.grey"}>
-            Sign in
-          </Heading>
+          <Link to="/sign-in">
+            <Heading
+              fontSize={"18px"}
+              fontWeight="700"
+              color={"secondary.grey"}
+            >
+              Sign in
+            </Heading>
+          </Link>
           <Heading
             fontSize={"22px"}
             fontWeight="700"
@@ -65,6 +70,20 @@ function Register() {
             <Input
               type="text"
               placeholder="Email"
+              color="secondary.grey"
+              borderRadius={"16px"}
+              opacity={1}
+              py="6"
+              _placeholder={{ opacity: 1, color: "secondary.grey" }}
+            />
+          </InputGroup>
+          <InputGroup borderColor="secondary.grey" mt="4">
+            <InputLeftElement pointerEvents="none" py="6">
+              <Icon as={BsTelephone} boxSize={"26"} color="primary.dark" />
+            </InputLeftElement>
+            <Input
+              type="tel"
+              placeholder="Phone number"
               color="secondary.grey"
               borderRadius={"16px"}
               opacity={1}
