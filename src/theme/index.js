@@ -47,6 +47,12 @@ const colors = {
     200: "#BAA9F6",
   },
 };
-
-const Theme = extendTheme({ colors });
+const breakpoints = {
+  sm: "450px",
+  md: "600px",
+  lg: "800px",
+  xl: "1024px",
+  "2xl": "1500px",
+};
+const Theme = extendTheme({ colors, breakpoints });
 export default Theme;

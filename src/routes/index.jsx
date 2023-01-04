@@ -1,14 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import Name from "../components/Name";
-import Dashboard from "../pages/dashboard";
+import AuthWrapper from "../components/AuthWrapper";
+import SignIn from "../pages/signIn";
 import Livestream from "../pages/livestream";
 
 function LayoutRoute() {
   return (
     <Routes>
       <Route path="/" exact element={<Livestream />} />
-      {/* <Route exact element={<Name />}>
-      </Route> */}
+      <Route element={<AuthWrapper />}>
+        <Route path="/sign-in" element={<SignIn />} />
+        {/* <Route path="/register" element={<Register />} /> */}
+      </Route>
     </Routes>
   );
 }
